@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../../atoms/Button";
 //import { Button } from "components";
 
-export const NavContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -2,9 +2,9 @@ import React from "react";
 import * as S from "./style";
 import Logo from "../../../assets/img/Logo.png";
 
-const Navbar = () => {
+const Header = () => {
   return (
-    <S.NavContainer>
+    <S.HeaderContainer>
       <S.StyledNav>
         <S.LogoContainer>
           <S.AtthyDuriLogo src={Logo} />
@@ -31,8 +31,8 @@ const Navbar = () => {
           </S.StyledLi>
         </S.StyledUl>
       </S.StyledNav>
-    </S.NavContainer>
+    </S.HeaderContainer>
   );
 };
 
-export default Navbar;
+export default Header;
