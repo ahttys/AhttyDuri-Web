@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Button from "../../atoms/Button";
-//import { Button } from "components";
+//import Button from "../../atoms/Button";
+import { Button } from "components";
 
 export const HeaderContainer = styled.div`
   display: flex;

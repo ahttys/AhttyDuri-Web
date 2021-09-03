@@ -19,13 +19,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    // 컴파일러가 찾는 최초 모듈 위치
-    "baseUrl": ".",
-		"paths": {
-			"@src/*": ["src/*"],
-		}
+    "baseUrl": "src"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
