@@ -5,7 +5,8 @@ const theme = {
     white: "#fff",
     primaryscale: ["#FFC01E", "#FFAA2C"],
     secondaryscale: ["#5190DE", "#5195E9"],
-    gray: "#7E7E7E",
+    grayscale: ["#7E7E7E", "#FAFAFA"],
+    text: "#57554B",
   },
 };
 

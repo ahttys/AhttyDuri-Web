@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
+import { palette } from "styled-tools";
 
 const outlineStyles = css`
   &:focus {
     outline: none;
-    border: 1px solid ${(props) => props.theme.palette.primary};
+    border: 2px solid ${palette("primary")};
   }
 `;
 
@@ -17,6 +18,9 @@ export const Input = styled.input`
   align-items: center;
   border: 1px solid rgba(34, 36, 38, 0.15);
   &::placeholder {
-    color: ${(props) => props.theme.palette.gray};
+    ${palette("grayscale", 0)};
+  }
+  &:hover {
+    background-color: ${palette("grayscale", 1)};
   }
 `;

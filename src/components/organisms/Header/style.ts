@@ -1,6 +1,5 @@
 import styled from "styled-components";
-//import Button from "../../atoms/Button";
-import { Button } from "components";
+import { Button, Label } from "components";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -8,6 +7,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   height: 60px;
   box-shadow: rgb(0 0 0 / 8%) 0px 1px 0px 0px;
+  padding-top: 15px;
 
   @media only screen and (max-width: 768px) {
     height: auto;
@@ -26,10 +26,6 @@ export const StyledNav = styled.nav`
 
 export const LogoContainer = styled.div``;
 
-export const AtthyDuriLogo = styled.img`
-  height: 40px;
-`;
-
 export const StyledUl = styled.ul`
   display: flex;
   margin: 0;
@@ -46,14 +42,15 @@ export const StyledLi = styled.li`
   display: flex;
   align-items: center;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
 `;
 
-export const StyledA = styled.a`
+export const StyledLabel = styled(Label)`
   cursor: pointer;
   margin: 10px;
+  color: ${(props) => props.theme.palette.text};
   &:hover {
-    color: ${(props) => props.theme.palette.gray};
+    color: ${(props) => props.theme.palette.grayscale[0]};
   }
 
   @media only screen and (max-width: 768px) {

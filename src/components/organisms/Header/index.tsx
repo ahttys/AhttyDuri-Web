@@ -1,24 +1,30 @@
 import React from "react";
 import * as S from "./style";
-import Logo from "../../../assets/img/Logo.png";
+import { Link, Logo } from "components";
 
 const Header = () => {
   return (
     <S.HeaderContainer>
       <S.StyledNav>
         <S.LogoContainer>
-          <S.AtthyDuriLogo src={Logo} />
+          <Logo />
         </S.LogoContainer>
 
         <S.StyledUl>
           <S.StyledLi>
-            <S.StyledA>코스 조회</S.StyledA>
+            <Link>
+              <S.StyledLabel>코스 조회</S.StyledLabel>
+            </Link>
           </S.StyledLi>
           <S.StyledLi>
-            <S.StyledA>코스 등록하기</S.StyledA>
+            <Link>
+              <S.StyledLabel>코스 등록하기</S.StyledLabel>
+            </Link>
           </S.StyledLi>
           <S.StyledLi>
-            <S.StyledA>제휴 문의</S.StyledA>
+            <Link>
+              <S.StyledLabel>제휴 문의</S.StyledLabel>
+            </Link>
           </S.StyledLi>
         </S.StyledUl>
 

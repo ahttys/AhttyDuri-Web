@@ -1,13 +1,13 @@
-import LoginForm from "./";
+import Header from ".";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default {
-  title: "Organisms/LoginForm",
-  component: [LoginForm],
+  title: "Molecules/Header",
+  component: [Header],
 };
 
 export const Default = () => (
   <Router>
-    <LoginForm />
+    <Header />
   </Router>
 );

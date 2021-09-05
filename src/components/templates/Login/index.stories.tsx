@@ -1,13 +1,13 @@
-import LoginForm from "./";
+import Login from "./";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default {
-  title: "Organisms/LoginForm",
-  component: [LoginForm],
+  title: "Templates/Login",
+  component: [Login],
 };
 
 export const Default = () => (
   <Router>
-    <LoginForm />
+    <Login />
   </Router>
 );
