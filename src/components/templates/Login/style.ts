@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Label, LoginForm } from "components";
+import { LoginForm } from "components";
 
 export const LoginBackground = styled.div`
   background-color: ${(props) => props.theme.palette.grayscale[1]};
