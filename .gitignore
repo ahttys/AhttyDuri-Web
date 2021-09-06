@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 
-src/common/constants/kakao.ts
+src\common\constants\kako.ts
