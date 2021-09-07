@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, Label } from "components";
+import { Button, Label, Link } from "components";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -64,4 +64,9 @@ export const StyledButton = styled(Button)`
     width: 30%;
     margin: 5px auto;
   }
+`;
+
+export const StyledLink = styled(Link)`
+  width: 100%;
+  height: 100%;
 `;

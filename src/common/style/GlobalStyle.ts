@@ -10,7 +10,7 @@ button {
     cursor: pointer;
     color: inherit;
   }
-a{ 
+a { 
     /* 링크의 색상 및 밑줄 없애기 */
     color: inherit;
     text-decoration: none;

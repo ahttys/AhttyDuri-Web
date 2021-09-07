@@ -3,6 +3,7 @@ import * as S from "./style";
 
 interface Props extends S.ButtonStyleProps {
   children: React.ReactNode;
+  color: "primary" | "secondary";
 }
 
 const Button = ({ children, color, ...props }: Props) => {

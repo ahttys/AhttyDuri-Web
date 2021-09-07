@@ -31,6 +31,7 @@ export const LinkSection = styled.section`
   display: flex;
   justify-content: center;
 `;
+
 export const ColoredLabel = styled(Label)`
   color: ${(props) => props.theme.palette.text};
   font-weight: bolder;
@@ -41,12 +42,27 @@ export const ColoredLabel = styled(Label)`
   }
 `;
 
-export const SocialLoginScetion = styled.section`
-  border-top: 1px solid rgb(219, 219, 219);
-  margin: 20px 0;
+export const SocialInfoLabel = styled(Label)`
+  margin-top: 10px;
+  color: ${(props) => props.theme.palette.grayscale[0]};
+  font-size: 11px;
+  font-weight: bolder;
   display: flex;
   justify-content: center;
 `;
+
+export const SocialLoginSection = styled.section`
+  border-top: 1px solid rgb(219, 219, 219);
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const SocialLoginButton = styled.img`
   margin: 20px 10px;
   height: 50px;
