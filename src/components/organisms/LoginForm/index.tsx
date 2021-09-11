@@ -5,17 +5,18 @@ import { Link } from "components";
 import kakaologin from "../../../assets/img/kakaologin.svg";
 import applelogin from "../../../assets/img/applelogin.svg";
 import { KAKAO_AUTH_URL } from "common/constants/kako";
+import { IUser } from "../../../types/user";
 
 type LoginFormData = {
   email: string;
   password: string;
 };
 
-interface ActivationFormProps {
-  onSubmit: (props: any) => void;
+interface IProps {
+  onSubmit: (props: IUser) => void;
 }
 
-const LoginForm = ({ onSubmit }: ActivationFormProps) => {
+const LoginForm = ({ onSubmit }: IProps) => {
   const { register, handleSubmit } = useForm<LoginFormData>();
 
   return (

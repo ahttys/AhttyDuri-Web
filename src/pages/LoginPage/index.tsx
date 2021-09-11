@@ -2,12 +2,13 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Login } from "components";
 import { loginUser } from "../../modules/user";
+import { IUser } from "../../types/user";
 import axios from "axios";
 
 const LoginPage = () => {
-  const dispatch = useDispatch();
+  //  const dispatch = useDispatch();
 
-  const onSubmit = async (userData: any) => {
+  const onSubmit = async (userData: IUser) => {
     console.log(userData);
     // dispatch(loginUser(userData));
 

@@ -5,6 +5,7 @@ import kakaologin from "../../../assets/img/kakaologin.svg";
 import applelogin from "../../../assets/img/applelogin.svg";
 import { KAKAO_AUTH_URL } from "common/constants/kako";
 import { useForm } from "react-hook-form";
+import { IRegister } from "../../../types/user";
 
 type RegisterFormData = {
   email: string;
@@ -13,11 +14,11 @@ type RegisterFormData = {
   confirmPassword: string;
 };
 
-interface ActivationFormProps {
-  onSubmit: (props: any) => void;
+interface IProps {
+  onSubmit: (props: IRegister) => void;
 }
 
-const RegisterForm = ({ onSubmit }: ActivationFormProps) => {
+const RegisterForm = ({ onSubmit }: IProps) => {
   const { register, handleSubmit } = useForm<RegisterFormData>();
 
   return (

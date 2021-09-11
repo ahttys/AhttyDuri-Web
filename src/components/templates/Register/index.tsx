@@ -1,9 +1,10 @@
 import React from "react";
 import * as S from "./style";
 import { RegisterForm } from "components";
+import { IRegister } from "../../../types/user";
 
 interface Props {
-  onSubmit: (props: any) => void;
+  onSubmit: (props: IRegister) => void;
 }
 
 const Register = ({ onSubmit }: Props) => {
