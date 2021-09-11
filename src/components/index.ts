@@ -10,6 +10,8 @@ export { default as Logo } from "./molecules/Logo";
 // Organisms
 export { default as Header } from "./organisms/Header";
 export { default as LoginForm } from "./organisms/LoginForm";
+export { default as RegisterForm } from "./organisms/RegisterForm";
 
 // Templates
 export { default as Login } from "./templates/Login";
+export { default as Register } from "./templates/Register";

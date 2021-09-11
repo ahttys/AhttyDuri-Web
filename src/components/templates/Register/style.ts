@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LoginBackground = styled.div`
+export const RegisterBackground = styled.div`
   // background-color: ${(props) => props.theme.palette.grayscale[1]};
   height: 90vh;
   display: flex;

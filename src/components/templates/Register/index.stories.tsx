@@ -1,13 +1,13 @@
-import Login from "./";
+import Register from "./";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default {
-  title: "Templates/Login",
-  component: [Login],
+  title: "Templates/Register",
+  component: [Register],
 };
 
 export const Default = () => (
   <Router>
-    <Login onSubmit={(data) => console.log(data)} />
+    <Register onSubmit={(data) => console.log(data)} />
   </Router>
 );

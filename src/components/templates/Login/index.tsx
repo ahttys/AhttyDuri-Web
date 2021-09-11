@@ -1,11 +1,16 @@
 import React from "react";
 import * as S from "./style";
-import { Link } from "components";
+import { LoginForm } from "components";
+import { IUser } from "../../../types/user";
 
-const Login = () => {
+interface IProps {
+  onSubmit: (props: IUser) => void;
+}
+
+const Login = ({ onSubmit }: IProps) => {
   return (
     <S.LoginBackground>
-      <S.CenteredLoginForm></S.CenteredLoginForm>
+      <LoginForm onSubmit={onSubmit}></LoginForm>
     </S.LoginBackground>
   );
 };
