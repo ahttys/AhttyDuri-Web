@@ -1,8 +1,12 @@
 import React from "react";
 import * as S from "./style";
 import { Logo } from "components";
+import { useSelector } from "react-redux";
+import { RootState } from "modules";
 
 const Header = () => {
+  const { loginSuccess } = useSelector((state: RootState) => state.user);
+
   return (
     <S.HeaderContainer>
       <S.StyledNav>
@@ -27,19 +31,22 @@ const Header = () => {
             </S.StyledLink>
           </S.StyledLi>
         </S.StyledUl>
-
-        <S.StyledUl>
-          <S.StyledLi>
-            <S.StyledLink to="/login">
-              <S.StyledButton color="primary">로그인</S.StyledButton>
-            </S.StyledLink>
-          </S.StyledLi>
-          <S.StyledLi>
-            <S.StyledLink to="/register">
-              <S.StyledButton color="secondary">회원가입</S.StyledButton>
-            </S.StyledLink>
-          </S.StyledLi>
-        </S.StyledUl>
+        {loginSuccess ? (
+          "로그인됨"
+        ) : (
+          <S.StyledUl>
+            <S.StyledLi>
+              <S.StyledLink to="/login">
+                <S.StyledButton color="primary">로그인</S.StyledButton>
+              </S.StyledLink>
+            </S.StyledLi>
+            <S.StyledLi>
+              <S.StyledLink to="/register">
+                <S.StyledButton color="secondary">회원가입</S.StyledButton>
+              </S.StyledLink>
+            </S.StyledLi>
+          </S.StyledUl>
+        )}
       </S.StyledNav>
     </S.HeaderContainer>
   );

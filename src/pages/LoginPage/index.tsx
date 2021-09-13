@@ -1,22 +1,37 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Login } from "components";
-import { loginUser } from "../../modules/user";
+import { RootState } from "modules";
+import { userLogin } from "../../modules/user";
 import { IUser } from "../../types/user";
-import axios from "axios";
+import { useHistory } from "react-router";
 
 const LoginPage = () => {
-  //  const dispatch = useDispatch();
+  const { loginSuccess, error } = useSelector((state: RootState) => state.user);
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-  const onSubmit = async (userData: IUser) => {
-    console.log(userData);
-    // dispatch(loginUser(userData));
+  console.log(loginSuccess);
+  console.log(error);
 
-    const response = await axios.post(
-      "http://15.165.241.123/api/auth/login",
-      userData
-    );
-    console.log(response);
+  if (loginSuccess) {
+    // 로그인 성공 시 LandingPage로
+    history.push("/");
+  }
+
+  const onSubmit = (loginData: IUser) => {
+    console.log(loginData);
+    dispatch(userLogin(loginData));
+
+    if (error) {
+      alert("로그인에 실패했습니다.");
+    }
+
+    // const response = await axios.post(
+    //   "http://15.165.241.123/api/auth/login",
+    //   loginData
+    // );
+    // console.log(response);
   };
 
   return <Login onSubmit={onSubmit} />;
