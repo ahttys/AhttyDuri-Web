@@ -23,4 +23,9 @@ export const Input = styled.input`
   &:hover {
     background-color: ${palette("grayscale", 1)};
   }
+  &:-webkit-autofill {
+    // 자동완성 시 색변경 방지
+    box-shadow: 0 0 0px 1000px #ffffff inset;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  }
 `;

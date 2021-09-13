@@ -5,7 +5,6 @@ const rootReducer = combineReducers({
   user,
 });
 
-// 루트 리듀서를 내보내주세요.
 export default rootReducer;
 
 // 루트 리듀서의 반환값를 유추해줍니다
