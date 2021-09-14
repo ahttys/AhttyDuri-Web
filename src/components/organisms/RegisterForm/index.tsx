@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./style";
 import { Link } from "components";
 import kakaologin from "../../../assets/img/kakaologin.svg";
