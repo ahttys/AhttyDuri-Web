@@ -1,4 +1,3 @@
-import React from "react";
 import { Register } from "components";
 import axios from "axios";
 import { IRegister } from "../../types/user";

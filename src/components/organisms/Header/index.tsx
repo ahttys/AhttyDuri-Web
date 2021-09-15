@@ -1,10 +1,12 @@
 import React from "react";
 import * as S from "./style";
 import { Logo } from "components";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "modules";
+import { userLogout } from "modules/user";
 
 const Header = () => {
+  const dispatch = useDispatch();
   const { loginSuccess } = useSelector((state: RootState) => state.user);
 
   return (
@@ -13,7 +15,6 @@ const Header = () => {
         <S.LogoContainer>
           <Logo />
         </S.LogoContainer>
-
         <S.StyledUl>
           <S.StyledLi>
             <S.StyledLink>
@@ -32,7 +33,18 @@ const Header = () => {
           </S.StyledLi>
         </S.StyledUl>
         {loginSuccess ? (
-          "로그인됨"
+          <S.StyledUl>
+            <S.StyledLi>
+              <S.StyledButton
+                color="secondary"
+                onClick={() => {
+                  dispatch(userLogout());
+                }}
+              >
+                로그아웃
+              </S.StyledButton>
+            </S.StyledLi>
+          </S.StyledUl>
         ) : (
           <S.StyledUl>
             <S.StyledLi>
