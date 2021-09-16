@@ -25,12 +25,6 @@ const LoginPage = () => {
     if (error) {
       alert("로그인에 실패했습니다.");
     }
-
-    // const response = await axios.post(
-    //   "http://15.165.241.123/api/auth/login",
-    //   loginData
-    // );
-    // console.log(response);
   };
 
   return <Login onSubmit={onSubmit} />;

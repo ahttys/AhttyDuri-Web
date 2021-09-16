@@ -45,7 +45,7 @@ const LoginForm = ({ onSubmit }: IProps) => {
       </S.LinkSection>
 
       <S.SocialLoginSection>
-        <S.SocialInfoLabel>SNS계정으로 간편 회원가입</S.SocialInfoLabel>
+        <S.SocialInfoLabel>SNS계정으로 간편 로그인</S.SocialInfoLabel>
         <S.ButtonWrapper>
           <Link href={KAKAO_AUTH_URL}>
             <S.SocialLoginButton src={kakaologin} />
