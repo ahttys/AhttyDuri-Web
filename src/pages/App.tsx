@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../common/style/themes/default";
 import GlobalStyles from "../common/style/GlobalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Header } from "components";
+import { Header, KaKaoLogin } from "components";
 import { LandingPage, LoginPage, RegisterPage } from "pages";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "modules";
@@ -26,6 +26,7 @@ function App() {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
+          <Route path="/oauth/callback/kakao" component={KaKaoLogin} />
         </Switch>
       </Router>
     </ThemeProvider>
