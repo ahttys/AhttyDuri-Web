@@ -14,7 +14,7 @@ const KaKaoLogin = () => {
   useEffect(() => {
     const getToken = async () => {
       let response = await axios.get(
-        `https://honest-vampirebat-14.loca.lt/auth/login/kakao?code=${authorizationCode}`
+        `https://clever-donkey-20.loca.lt/auth/login/kakao?code=${authorizationCode}`
       );
       console.log(response);
     };

@@ -2,8 +2,14 @@ import { ThemeProvider } from "styled-components";
 import theme from "../common/style/themes/default";
 import GlobalStyles from "../common/style/GlobalStyle";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-import { KaKaoLogin } from "components";
-import { LandingPage, LoginPage, RegisterPage, TestPage } from "pages";
+//import { KaKaoLogin } from "components";
+import {
+  LandingPage,
+  LoginPage,
+  RegisterPage,
+  TestPage,
+  KaKaoLogin,
+} from "pages";
 import { PublicRoute, PrivateRoute } from "routes";
 
 function App() {

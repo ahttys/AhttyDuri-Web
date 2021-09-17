@@ -7,7 +7,6 @@ export { default as Loading } from "./atoms/Loading";
 
 // Molecules
 export { default as Logo } from "./molecules/Logo";
-export { default as KaKaoLogin } from "./molecules/KaKaoLogin";
 
 // Organisms
 export { default as Header } from "./organisms/Header";

@@ -4,3 +4,4 @@ export { default as LoginPage } from "./LoginPage";
 export { default as RegisterPage } from "./RegisterPage";
 
 export { default as TestPage } from "./TestPage";
+export { default as KaKaoLogin } from "./KaKaoLogin";
