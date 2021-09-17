@@ -13,9 +13,13 @@ const KaKaoLogin = () => {
 
   useEffect(() => {
     const getToken = async () => {
-      let response = await axios.get(`${authorizationCode}`);
+      let response = await axios.get(
+        `https://honest-vampirebat-14.loca.lt/auth/login/kakao?code=${authorizationCode}`
+      );
+      console.log(response);
     };
-  }, []);
+    getToken();
+  }, [authorizationCode]);
 
   console.log(authorizationCode);
 

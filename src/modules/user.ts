@@ -5,6 +5,7 @@ const LOGIN = "user_LOGIN" as const;
 const LOGIN_SUCCESS = "user_LOGIN_SUCCESS" as const;
 const LOGIN_ERROR = "user_LOGIN_ERROR" as const;
 const LOGOUT = "user_LOGOUT" as const;
+const LOGIN_CHECK = "user_LOGIN_CHECK";
 
 type UserAction = ReturnType<typeof userLogin>;
 
@@ -35,7 +36,7 @@ export const userCheck = () => (dispatch: any) => {
   const token = getCookie("userToken");
   if (token) {
     dispatch({
-      type: LOGIN_SUCCESS,
+      type: LOGIN_CHECK,
     });
   }
 };
@@ -67,6 +68,8 @@ const user = (state = initialState, action: any) => {
       return { ...state, error: action.error };
     case LOGOUT:
       return { ...state, loginSuccess: false };
+    case LOGIN_CHECK:
+      return { ...state, loginSuccess: true };
     default:
       return state;
   }

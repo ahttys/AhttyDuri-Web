@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { palette } from "styled-tools";
+import { Link } from "react-router-dom";
 
 export interface ButtonStyleProps {
   color: "primary" | "secondary";
@@ -47,4 +48,9 @@ const ButtonStyle = css<ButtonStyleProps>`
 
 export const Button = styled.button`
   ${ButtonStyle}
+`;
+
+export const StyledLink = styled(Link)`
+  width: 100%;
+  height: 100%;
 `;
