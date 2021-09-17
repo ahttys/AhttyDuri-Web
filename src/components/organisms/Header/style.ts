@@ -68,5 +68,4 @@ export const StyledButton = styled(Button)`
 
 export const StyledLink = styled(Link)`
   width: 100%;
-  height: 100%;
 `;

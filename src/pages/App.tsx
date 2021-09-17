@@ -1,32 +1,26 @@
-import { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import theme from "../common/style/themes/default";
 import GlobalStyles from "../common/style/GlobalStyle";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Header, KaKaoLogin } from "components";
-import { LandingPage, LoginPage, RegisterPage } from "pages";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "modules";
-import { userCheck } from "modules/user";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { KaKaoLogin } from "components";
+import { LandingPage, LoginPage, RegisterPage, TestPage } from "pages";
+import { PublicRoute, PrivateRoute } from "routes";
 
 function App() {
-  const dispatch = useDispatch();
-  const { loginSuccess } = useSelector((state: RootState) => state.user);
-
-  useEffect(() => {
-    dispatch(userCheck());
-  }, []);
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Router>
-        <Header />
         <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/login" component={LoginPage} />
-          <Route exact path="/register" component={RegisterPage} />
-          <Route path="/oauth/callback/kakao" component={KaKaoLogin} />
+          <PrivateRoute exact path="/" component={LandingPage} />
+          <PublicRoute exact path="/login" component={LoginPage} />
+          <PublicRoute exact path="/register" component={RegisterPage} />
+          <PrivateRoute exact path="/test" component={TestPage} />
+          <PublicRoute
+            exact
+            path="/oauth/callback/kakao"
+            component={KaKaoLogin}
+          />
         </Switch>
       </Router>
     </ThemeProvider>

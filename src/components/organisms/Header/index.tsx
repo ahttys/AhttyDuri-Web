@@ -17,7 +17,7 @@ const Header = () => {
         </S.LogoContainer>
         <S.StyledUl>
           <S.StyledLi>
-            <S.StyledLink>
+            <S.StyledLink to="/test">
               <S.StyledLabel>코스 조회</S.StyledLabel>
             </S.StyledLink>
           </S.StyledLi>
@@ -48,14 +48,14 @@ const Header = () => {
         ) : (
           <S.StyledUl>
             <S.StyledLi>
-              <S.StyledLink to="/login">
-                <S.StyledButton color="primary">로그인</S.StyledButton>
-              </S.StyledLink>
+              <S.StyledButton color="primary" to="/login">
+                로그인
+              </S.StyledButton>
             </S.StyledLi>
             <S.StyledLi>
-              <S.StyledLink to="/register">
-                <S.StyledButton color="secondary">회원가입</S.StyledButton>
-              </S.StyledLink>
+              <S.StyledButton color="secondary" to="/register">
+                회원가입
+              </S.StyledButton>
             </S.StyledLi>
           </S.StyledUl>
         )}
