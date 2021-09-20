@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../common/style/themes/default";
 import GlobalStyles from "../common/style/GlobalStyle";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-//import { KaKaoLogin } from "components";
+import { PublicRoute, ProtectedRoute, AuthRoute } from "routes";
 import {
   LandingPage,
   LoginPage,
@@ -10,7 +10,6 @@ import {
   TestPage,
   KaKaoLogin,
 } from "pages";
-import { PublicRoute, PrivateRoute } from "routes";
 
 function App() {
   return (
@@ -18,11 +17,11 @@ function App() {
       <GlobalStyles />
       <Router>
         <Switch>
-          <PrivateRoute exact path="/" component={LandingPage} />
-          <PublicRoute exact path="/login" component={LoginPage} />
-          <PublicRoute exact path="/register" component={RegisterPage} />
-          <PrivateRoute exact path="/test" component={TestPage} />
-          <PublicRoute
+          <PublicRoute exact path="/" component={LandingPage} />
+          <AuthRoute exact path="/login" component={LoginPage} />
+          <AuthRoute exact path="/register" component={RegisterPage} />
+          <ProtectedRoute exact path="/test" component={TestPage} />
+          <AuthRoute
             exact
             path="/oauth/callback/kakao"
             component={KaKaoLogin}

@@ -14,7 +14,7 @@ interface RouteProps {
 // return  condition ? (<Route  path={props.path}  exact={props.exact} component={props.component} />) :
 // (<Redirect  to="/page/login"  />);
 
-const PrivateRoute = ({ exact, path, component: Component }: RouteProps) => {
+const ProtectedRoute = ({ exact, path, component: Component }: RouteProps) => {
   const dispatch = useDispatch();
   const { loginSuccess } = useSelector((state: RootState) => state.user);
 
@@ -40,4 +40,4 @@ const PrivateRoute = ({ exact, path, component: Component }: RouteProps) => {
   );
 };
 
-export default PrivateRoute;
+export default ProtectedRoute;
