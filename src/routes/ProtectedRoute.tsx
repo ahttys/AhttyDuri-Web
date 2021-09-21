@@ -11,9 +11,6 @@ interface RouteProps {
   exact: boolean;
 }
 
-// return  condition ? (<Route  path={props.path}  exact={props.exact} component={props.component} />) :
-// (<Redirect  to="/page/login"  />);
-
 const ProtectedRoute = ({ exact, path, component: Component }: RouteProps) => {
   const dispatch = useDispatch();
   const { loginSuccess } = useSelector((state: RootState) => state.user);
@@ -22,7 +19,7 @@ const ProtectedRoute = ({ exact, path, component: Component }: RouteProps) => {
     dispatch(userCheck());
   }, [dispatch]);
 
-  return loginSuccess ? (
+  return loginSuccess ? ( // 로그인이 돼있을 때만 접근할 수 있는 페이지
     <Route
       exact={exact}
       path={path}
