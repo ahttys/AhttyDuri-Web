@@ -5,12 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "modules";
 import { userLogout } from "modules/user";
 
-const Header = () => {
+const Header = ({ ...props }) => {
   const dispatch = useDispatch();
   const { loginSuccess } = useSelector((state: RootState) => state.user);
 
   return (
-    <S.HeaderContainer>
+    <S.HeaderContainer {...props}>
       <S.StyledNav>
         <S.LogoContainer>
           <Logo />

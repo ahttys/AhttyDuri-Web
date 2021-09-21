@@ -16,3 +16,4 @@ export { default as RegisterForm } from "./organisms/RegisterForm";
 // Templates
 export { default as Login } from "./templates/Login";
 export { default as Register } from "./templates/Register";
+export { default as Landing } from "./templates/Landing";
