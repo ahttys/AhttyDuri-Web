@@ -12,14 +12,16 @@ const PublicRoute = ({ exact, path, component: Component }: RouteProps) => (
   <Route
     exact={exact}
     path={path}
-    render={() => {
-      return (
+    render={() =>
+      path === "/" ? (
+        <Component />
+      ) : (
         <>
           <Header />
           <Component />
         </>
-      );
-    }}
+      )
+    }
   />
 );
 

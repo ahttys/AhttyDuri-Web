@@ -7,12 +7,20 @@ const Landing = () => {
     <>
       <S.FixedHeader />
       <ReactFullpage
+        anchors={["firstPage", "secondPage", "thirdPage"]}
         scrollOverflow={true}
+        navigation={true}
         render={({ fullpageApi }) => {
           return (
             <S.FullpageWrapper>
               <S.FirstSection className="section">
-                <h3>Section 1asdddddddd</h3>
+                <S.FlexBox>
+                  <h5>나는 떠나고 싶다.. 어딘가로</h5>
+                </S.FlexBox>
+
+                <h3>반복되는 일상에서</h3>
+                <h3>참신하고</h3>
+                <h3>새로운 여행으로</h3>
               </S.FirstSection>
 
               <div className="section">
