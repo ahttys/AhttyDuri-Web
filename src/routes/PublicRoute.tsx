@@ -7,22 +7,24 @@ interface RouteProps {
   exact: boolean;
 }
 
-const PublicRoute = ({ exact, path, component: Component }: RouteProps) => (
+const PublicRoute = ({ exact, path, component: Component }: RouteProps) => {
   // 로그인 안해도 되는 페이지들
-  <Route
-    exact={exact}
-    path={path}
-    render={() =>
-      path === "/" ? (
-        <Component />
-      ) : (
-        <>
-          <Header />
-          <Component />
-        </>
-      )
-    }
-  />
-);
 
+  return (
+    <Route
+      exact={exact}
+      path={path}
+      render={() =>
+        path === "/" ? (
+          <Component />
+        ) : (
+          <>
+            <Header />
+            <Component />
+          </>
+        )
+      }
+    />
+  );
+};
 export default PublicRoute;

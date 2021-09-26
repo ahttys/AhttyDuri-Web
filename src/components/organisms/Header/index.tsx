@@ -1,13 +1,17 @@
-import React from "react";
+import { useEffect } from "react";
 import * as S from "./style";
 import { Logo } from "components";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "modules";
-import { userLogout } from "modules/user";
+import { userLogout, userCheck } from "modules/user";
 
 const Header = ({ ...props }) => {
   const dispatch = useDispatch();
   const { loginSuccess } = useSelector((state: RootState) => state.user);
+
+  useEffect(() => {
+    dispatch(userCheck());
+  }, [dispatch]);
 
   return (
     <S.HeaderContainer {...props}>
