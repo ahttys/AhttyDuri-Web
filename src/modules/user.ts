@@ -41,6 +41,14 @@ export const userCheck = () => (dispatch: any) => {
   }
 };
 
+export const kakaoLogin = (token: string) => (dispatch: any) => {
+  setCookie("userToken", token, {
+    path: "/",
+    maxAge: 60 * 60 * 9, // 9시간
+  });
+  dispatch({ type: LOGIN_SUCCESS, token: token });
+};
+
 export const userLogout = () => (dispatch: any) => {
   removeCookie("userToken");
   console.log("remove");

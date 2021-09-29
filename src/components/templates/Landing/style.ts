@@ -2,9 +2,9 @@ import styled from "styled-components";
 import firstSection from "../../../assets/img/firstSection.png";
 import { Header } from "components";
 
-interface IText {
-  color: "primary" | "white";
-}
+// interface IText {
+//   color: "primary" | "white";
+// }
 
 export const FixedHeader = styled(Header)`
   z-index: 9;
@@ -52,7 +52,7 @@ export const FlexBox = styled.div`
 `;
 
 export const SubInfo = styled.p`
-  opacity: 0.8;
+  opacity: 0.9;
   margin-top: 20px;
   color: ${(props) => props.theme.palette.white};
   font-size: 1rem;
@@ -62,5 +62,5 @@ export const Line = styled.div`
   width: 72px;
   height: 2px;
   background-color: ${(props) => props.theme.palette.primary};
-  margin-right: 30px;
+  margin-right: 20px;
 `;
