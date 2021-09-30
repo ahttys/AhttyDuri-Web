@@ -8,3 +8,10 @@ export const setCookie = (name: string, value: string, option?: any) =>
 export const getCookie = (name: string) => cookies.get(name);
 
 export const removeCookie = (name: string) => cookies.remove(name);
+
+export const removeAllCookie = () =>
+  document.cookie.split(";").forEach((c) => {
+    document.cookie = c
+      .replace(/^ +/, "")
+      .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+  });
