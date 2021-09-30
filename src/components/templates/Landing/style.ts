@@ -18,7 +18,12 @@ export const FullpageWrapper = styled.div`
   position: relative;
   h3 {
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 64px;
+  }
+  @media only screen and (max-width: 768px) {
+    h3 {
+      font-size: 32px;
+    }
   }
 `;
 
@@ -38,7 +43,7 @@ export const FirstSection = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 1280px;
+  width: 1200px;
   display: flex;
   flex-direction: column;
   padding: 0 320px;
