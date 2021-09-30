@@ -1,5 +1,10 @@
 import axios from "axios";
-import { setCookie, getCookie, removeCookie } from "utils/cookies";
+import {
+  setCookie,
+  getCookie,
+  removeCookie,
+  removeAllCookie,
+} from "utils/cookies";
 
 const LOGIN = "user_LOGIN" as const;
 const LOGIN_SUCCESS = "user_LOGIN_SUCCESS" as const;
@@ -41,8 +46,17 @@ export const userCheck = () => (dispatch: any) => {
   }
 };
 
+export const kakaoLogin = (token: string) => (dispatch: any) => {
+  setCookie("userToken", token, {
+    path: "/",
+    maxAge: 60 * 60 * 9, // 9시간
+  });
+  dispatch({ type: LOGIN_SUCCESS, token: token });
+};
+
 export const userLogout = () => (dispatch: any) => {
-  removeCookie("userToken");
+  //removeCookie("userToken");
+  removeAllCookie(); // 카카오 관련 세션 삭제 위해
   console.log("remove");
   dispatch({
     type: LOGOUT,

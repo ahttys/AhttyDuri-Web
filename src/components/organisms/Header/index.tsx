@@ -13,6 +13,8 @@ const Header = ({ ...props }) => {
     dispatch(userCheck());
   }, [dispatch]);
 
+  console.log(loginSuccess);
+
   return (
     <S.HeaderContainer {...props}>
       <S.StyledNav>
