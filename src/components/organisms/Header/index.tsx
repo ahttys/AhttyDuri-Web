@@ -23,12 +23,12 @@ const Header = ({ ...props }) => {
         </S.LogoContainer>
         <S.StyledUl>
           <S.StyledLi>
-            <S.StyledLink to="/test">
+            <S.StyledLink>
               <S.StyledLabel>코스 조회</S.StyledLabel>
             </S.StyledLink>
           </S.StyledLi>
           <S.StyledLi>
-            <S.StyledLink>
+            <S.StyledLink to="/test">
               <S.StyledLabel>코스 등록하기</S.StyledLabel>
             </S.StyledLink>
           </S.StyledLi>
