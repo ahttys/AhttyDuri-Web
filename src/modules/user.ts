@@ -1,10 +1,5 @@
 import axios from "axios";
-import {
-  setCookie,
-  getCookie,
-  removeCookie,
-  removeAllCookie,
-} from "utils/cookies";
+import { setCookie, getCookie, removeAllCookie } from "utils/cookies";
 
 const LOGIN = "user_LOGIN" as const;
 const LOGIN_SUCCESS = "user_LOGIN_SUCCESS" as const;
@@ -12,9 +7,9 @@ const LOGIN_ERROR = "user_LOGIN_ERROR" as const;
 const LOGOUT = "user_LOGOUT" as const;
 const LOGIN_CHECK = "user_LOGIN_CHECK";
 
-type UserAction = ReturnType<typeof userLogin>;
+// type UserAction = ReturnType<typeof userLogin>;
 
-type UserState = {};
+// type UserState = {};
 
 export const userLogin = (loginData: any) => async (dispatch: any) => {
   dispatch({

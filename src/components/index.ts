@@ -4,7 +4,8 @@ export { default as Label } from "./atoms/Label";
 export { default as Link } from "./atoms/Link";
 export { default as Input } from "./atoms/Input";
 export { default as Loading } from "./atoms/Loading";
-
+export { default as KakaoMap } from "./atoms/KakaoMap";
+export { default as Container } from "./atoms/Container";
 // Molecules
 export { default as Logo } from "./molecules/Logo";
 

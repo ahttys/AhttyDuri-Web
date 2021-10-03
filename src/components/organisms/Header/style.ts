@@ -15,7 +15,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const StyledNav = styled.nav`
-  width: 1280px;
+  width: 1200px;
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 768px) {
@@ -24,7 +24,11 @@ export const StyledNav = styled.nav`
   }
 `;
 
-export const LogoContainer = styled.div``;
+export const LogoContainer = styled.div`
+  @media only screen and (max-width: 768px) {
+    padding: 0 16px;
+  }
+`;
 
 export const StyledUl = styled.ul`
   display: flex;
@@ -66,6 +70,4 @@ export const StyledButton = styled(Button)`
   }
 `;
 
-export const StyledLink = styled(Link)`
-  width: 100%;
-`;
+export const StyledLink = styled(Link)``;
