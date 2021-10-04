@@ -27,3 +27,5 @@ src/common/constants/kako.ts
 
 # 환경변수
 .env
+
+ package-lock.json
