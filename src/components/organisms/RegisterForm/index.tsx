@@ -2,7 +2,6 @@ import * as S from "./style";
 import { Link } from "components";
 import kakaologin from "../../../assets/img/kakaologin.svg";
 import applelogin from "../../../assets/img/applelogin.svg";
-import { KAKAO_AUTH_URL } from "common/constants/kako";
 import { useForm } from "react-hook-form";
 import { IRegister } from "../../../types/user";
 
@@ -27,7 +26,9 @@ const RegisterForm = ({ onSubmit }: IProps) => {
       </S.LogoWrapper>
       <S.SocialInfoLabel>SNS계정으로 간편 회원가입</S.SocialInfoLabel>
       <S.SocialLoginSection>
-        <Link href={KAKAO_AUTH_URL}>
+        <Link
+          href={`https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_KAKAO_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_KAKAO_REDIRECT_URI}&response_type=code`}
+        >
           <S.SocialLoginButton src={kakaologin} />
         </Link>
         <S.SocialLoginButton src={applelogin} />

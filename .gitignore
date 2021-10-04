@@ -22,10 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# KaKao로그인 관련 파일
-src/common/constants/kako.ts
-
 # 환경변수
-.env
+.env*
 
  package-lock.json
