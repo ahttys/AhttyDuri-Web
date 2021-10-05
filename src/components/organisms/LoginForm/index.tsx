@@ -17,9 +17,6 @@ interface IProps {
 const LoginForm = ({ onSubmit }: IProps) => {
   const { register, handleSubmit } = useForm<LoginFormData>();
 
-  console.log(`${process.env.REACT_APP_KAKAO_CLIENT_ID}`);
-  console.log(process.env.REACT_APP_KAKAO_REDIRECT_URI);
-
   return (
     <S.LoginFormContainer>
       <S.LoginForm onSubmit={handleSubmit(onSubmit)}>
