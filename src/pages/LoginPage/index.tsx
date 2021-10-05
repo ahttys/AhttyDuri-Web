@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Login } from "components";
 import { RootState } from "modules";
@@ -10,7 +11,6 @@ const LoginPage = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  console.log(loginSuccess);
   console.log(error);
 
   if (loginSuccess) {
@@ -18,14 +18,18 @@ const LoginPage = () => {
     history.push("/");
   }
 
-  const onSubmit = (loginData: IUser) => {
-    console.log(loginData);
-    dispatch(userLogin(loginData));
+  const onSubmit = useCallback(
+    (loginData: IUser) => {
+      console.log("onSubmit - Login");
+      console.log(loginData);
+      dispatch(userLogin(loginData));
 
-    if (error) {
-      alert("로그인에 실패했습니다.");
-    }
-  };
+      if (error) {
+        alert("로그인에 실패했습니다.");
+      }
+    },
+    [dispatch, error]
+  );
 
   return <Login onSubmit={onSubmit} />;
 };
