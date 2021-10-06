@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import firstSection from "../../../assets/img/firstSection.png";
+import firstSection from "../../../assets/img/firstSection.jpg";
 import { Header } from "components";
 
 // interface IText {
