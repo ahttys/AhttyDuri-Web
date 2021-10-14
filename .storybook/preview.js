@@ -10,11 +10,14 @@ addDecorator(withThemesProvider([theme]), ThemeProvider);
 //addDecorator(StoryRouter());
 
 // 모든 스토리에 스타일을 적용하기 위한 글로벌 decorator
-addDecorator((story) => (
-  <>
-    <GlobalStyles /> {story()}
-  </>
-));
+export const decorators = [
+  (Story) => (
+    <>
+      <GlobalStyles />
+      <Story />
+    </>
+  ),
+];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

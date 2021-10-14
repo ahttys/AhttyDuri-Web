@@ -18,6 +18,17 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span { 
+    /* fullpage anchor */
+    background: #376092;
+}
+#fp-nav.fp-right {
+    right: 3%;
+}
+
+
 `;
 
 export default GlobalStyles;

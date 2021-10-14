@@ -1,5 +1,15 @@
-import Header from ".";
+import { Header } from "../../../components";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import rootReducer from "../../../modules/index";
+import Thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(Thunk))
+);
 
 export default {
   title: "Molecules/Header",
@@ -7,7 +17,7 @@ export default {
 };
 
 export const Default = () => (
-  <Router>
+  <Provider store={store}>
     <Header />
-  </Router>
+  </Provider>
 );

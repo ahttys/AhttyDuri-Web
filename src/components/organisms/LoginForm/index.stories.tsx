@@ -7,7 +7,5 @@ export default {
 };
 
 export const Default = () => (
-  <Router>
-    <LoginForm onSubmit={(data) => console.log(data)} />
-  </Router>
+  <LoginForm onSubmit={(data) => console.log(data)} />
 );
