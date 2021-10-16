@@ -120,5 +120,4 @@ export const SecondImageWrapper = styled.div`
 export const SecondSectionImage = styled.img`
   max-width: 100%;
   width: 600px;
-  border-radius: 5px;
 `;
