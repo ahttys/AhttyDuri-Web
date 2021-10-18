@@ -20,7 +20,7 @@ const RegisterPage = () => {
       };
 
       const response = await axios.post(
-        "http://15.165.241.123/api/auth/join",
+        "https://sehwagod.xyz/api/auth/join",
         joinInfo
       );
       console.log(response);

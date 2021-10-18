@@ -25,7 +25,7 @@ const KaKaoLogin = () => {
   useEffect(() => {
     const getToken = async () => {
       let response = await axios.get(
-        `http://15.165.241.123/api/auth/login/kakao?code=${authorizationCode}`
+        `https://sehwagod.xyz/api/auth/login/kakao?code=${authorizationCode}`
       );
       console.log(response);
       if (response.data.token) {
