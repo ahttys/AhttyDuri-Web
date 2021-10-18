@@ -12,7 +12,7 @@ export const Input = styled.input`
   ${outlineStyles}
   width: 100%;
   padding: 0 0.5rem;
-  box-sizing: border-box;
+  //box-sizing: border-box;
   border-radius: 4px;
   display: flex;
   align-items: center;

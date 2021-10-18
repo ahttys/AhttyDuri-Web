@@ -6,8 +6,4 @@ export default {
   component: [Login],
 };
 
-export const Default = () => (
-  <Router>
-    <Login onSubmit={(data) => console.log(data)} />
-  </Router>
-);
+export const Default = () => <Login onSubmit={(data) => console.log(data)} />;

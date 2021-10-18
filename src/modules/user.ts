@@ -17,7 +17,7 @@ export const userLogin = (loginData: any) => async (dispatch: any) => {
   });
   try {
     const response = await axios.post(
-      "http://15.165.241.123/api/auth/login",
+      "https://sehwagod.xyz/api/auth/login",
       loginData
     );
     console.log(response);

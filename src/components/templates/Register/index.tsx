@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./style";
 import { RegisterForm } from "components";
 import { IRegister } from "../../../types/user";

@@ -1,9 +1,10 @@
 import { KakaoMap, Container } from "components";
+import SearchInput from "components/molecules/SearchInput";
 
 const TestPage = () => {
   return (
     <Container>
-      <KakaoMap />
+      <SearchInput />
     </Container>
   );
 };

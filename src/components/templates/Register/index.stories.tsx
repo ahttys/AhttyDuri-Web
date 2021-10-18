@@ -1,4 +1,5 @@
-import Register from "./";
+// import Register from ".";
+import { Register } from "../../../components";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default {
@@ -7,7 +8,5 @@ export default {
 };
 
 export const Default = () => (
-  <Router>
-    <Register onSubmit={(data) => console.log(data)} />
-  </Router>
+  <Register onSubmit={(data) => console.log(data)} />
 );
