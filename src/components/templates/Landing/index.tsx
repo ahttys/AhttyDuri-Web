@@ -47,10 +47,10 @@ const Landing = () => {
                   </S.Half>
                 </S.Content>
               </S.SecondSection>
-              <div className="section">
-                <h3>Section3</h3>
-                {/* <button onClick={() => fullpageApi.moveTo(2)}>Move top</button> */}
-              </div>
+              {/* <div className="section">
+                <h3>Section3</h3> */}
+              {/* <button onClick={() => fullpageApi.moveTo(2)}>Move top</button> */}
+              {/* </div> */}
             </S.FullpageWrapper>
           );
         }}
